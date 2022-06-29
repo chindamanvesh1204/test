@@ -1,0 +1,25 @@
+<p>impurepipes works!</p>
+
+<h1>pure pipe & impure pipe</h1>
+ 
+ 
+<span>Search:</span><input [(ngModel)]="seaerchtext" type="text" name="text" placeholder="Enter name">
+<p>{{seaerchtext}}</p>
+<table class="table">
+ <thead>
+   <tr>
+     <td>EmpNo</td>
+     <td>name</td>
+     <td>disig</td>
+   </tr>
+ </thead>
+ <tbody>
+   <tr *ngFor="let emp of employes | filter:seaerchtext">
+     <td>{{emp.EmpNo}}</td>
+     <td>{{emp.name}}</td>
+     <td>{{emp.disignation}}</td>
+   </tr>
+ </tbody>
+</table>
+
+<button type="button"(click)="addemp()" class="btn btn-primary" >click here</button>
