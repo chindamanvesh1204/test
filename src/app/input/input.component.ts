@@ -11,7 +11,7 @@ export class InputComponent implements OnInit {
   @Input() fromparentstudentdata:any;
   @Input() fromparent:any;
   @Output() notifyparent =new EventEmitter();
-hai="hai hello outputdecorator"
+   hai="hai hello outputdecorator"
 PassToParent(){
   this.notifyparent.emit(this.hai)
 }

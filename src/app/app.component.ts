@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import { map } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
  
 
 @Component({
@@ -43,7 +46,21 @@ export class AppComponent {
   //   })
   // }
 
+    final_val = ajax('https://jsonplaceholder.typicode.com/users').pipe(
+    map(e => e.response)
+                     )
+    getdata(){
+    this.api.get('https://jsonplaceholder.typicode.com/users').subscribe((abc)=>{
+      console.log(abc)
+    })
 
-  
+    }
+  constructor(private api:HttpClient){
+     
+      this.final_val.subscribe((a)=>{
+       console.log(a)
+     })
+  }
+
  
 }
