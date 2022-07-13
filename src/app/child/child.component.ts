@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+
+  @Input() fromparentstudentdata:any;
+  @Input() fromparent:any;
+  @Output() notifyparent =new EventEmitter(); 
+
+
+  hai="hai hello outputdecorator";
+
+    
+  PassToParent(){
+    this.notifyparent.emit(this.hai)
+  }
+
+
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+ 
 }

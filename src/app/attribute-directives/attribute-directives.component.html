@@ -1,1 +1,28 @@
 <p>attribute-directives works!</p>
+
+
+
+<div [ngClass]=firstDiv>HII iam Angular </div>
+<div [ngClass]=secondDiv>HII iam secondDiv </div>
+
+<div [ngClass]="CheckValue === 'myname'?'activeClass':'inactiveClass' ">HII iam CheckValue </div>
+
+<div [ngClass]="{'activeClass':(CheckValue === 'myname')}">checking condition </div>
+ 
+ <div [ngStyle]="{'color':(CheckValue === 'yname'? 'red':'yellow')}">NgStyle property binding Here should color applied</div>
+
+ <div [ngStyle]="testColor">hii testColor written in Ts File</div>
+ <div [ngStyle]="testColor2">hii testColor written in Ts File</div>
+<h3 [ngStyle]="{color:'red'}">ngClass:</h3>
+ <p> We do ngClass Property Bindig for add css colorss , and  CSS colors written in Style sheet and the style properties are bind brom the .TS file to Html </p>
+ 
+ <h3 [ngStyle]="{color : (!TestedValue) ?'red':'yellow'}">ngStyle:</h3>
+ <p>We do ngstyle for add Css properties  from the .TS file  we do bing the styles from ts files only no need to add CSS properties from  in Style sheet</p>
+
+
+<input type="text" value=" " #name/>
+
+<button (click)="clickname( )">add Element</button>
+ <h3>{{name}}</h3>
+
+ <button (click)="clickname1(name.value)">Element</button>

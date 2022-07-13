@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -11,5 +11,18 @@ export class ParentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+    childevent:any;
+
+   forinputcomp2:string="hii this message from parentComponent ";
+   forinputcomponent =[ 
+    {anvesh:"anvesh", id:1},
+    {anvesh:"akhil", id:2},
+    {anvesh:"akki", id:3},
+  
+  ]
+
+
+
+
 
 }

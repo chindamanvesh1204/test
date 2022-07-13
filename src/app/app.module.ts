@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { GettersetterComponent } from './gettersetter/gettersetter.component';
 import { ImpurepipesComponent } from './pure/impurepipes/impurepipes.component';
-import { InputComponent } from './input/input.component';
-//import { HttpClientModule } from '@angular/common/http';
+ //import { HttpClientModule } from '@angular/common/http';
 import { HttpClientModule} from '@angular/common/http';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { ParentComponent } from './parent/parent.component';
@@ -20,8 +19,7 @@ import { ChildComponent } from './child/child.component';
     FilterPipe,
     GettersetterComponent,
     ImpurepipesComponent,
-    InputComponent,
-    AttributeDirectivesComponent,
+     AttributeDirectivesComponent,
     ParentComponent,
     ChildComponent
   ],

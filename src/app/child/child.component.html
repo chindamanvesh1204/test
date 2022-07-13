@@ -1,1 +1,24 @@
-<p>child works!</p>
+
+<div class="container child">
+    <p>child works!</p>
+    <button (click)="PassToParent()">click to emit data from child to parent</button>       
+            <h1>{{fromparent}}</h1>
+            
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>name</td>
+                            <td>id</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr let *ngFor="let x of fromparentstudentdata">
+                            <td>{{x.anvesh}}</td>
+                            <td>{{x.id}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>this is the end---------------------------------</p>
+
+</div>

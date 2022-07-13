@@ -1,1 +1,7 @@
+
+<div class="container parent">
 <p>parent works!</p>
+<h6>{{childevent}}</h6>
+<app-child   [fromparentstudentdata]="forinputcomponent" [fromparent]="forinputcomp2" (notifyparent)="childevent=$event "></app-child>
+<p>this is parent end ------------------------------</p>
+</div>

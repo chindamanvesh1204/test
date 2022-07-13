@@ -1,7 +1,7 @@
- 
- <router-outlet></router-outlet>
- <h6>{{childevent}}</h6>
- <app-input [fromparentstudentdata]="forinputcomponent" [fromparent]="forinputcomp2" (notifyparent)="childevent=$event " ></app-input>
+<app-attribute-directives></app-attribute-directives>
+ <!-- <app-child></app-child> -->
+ <app-parent></app-parent>  
+ <router-outlet></router-outlet>  
 
- <!-- <p>{{operonDOM}}</p>
- <p>{{operonDOM}}</p> -->
+
+ <button (click)="getdata()">click</button>

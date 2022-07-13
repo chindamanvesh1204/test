@@ -11,15 +11,8 @@ import { ajax } from 'rxjs/ajax';
 })
 export class AppComponent {
   title = 'Test';
-  childevent:any;
-  forinputcomp2:string="hii this message from appcomponent "
 
-  forinputcomponent =[ 
-    {anvesh:"anvesh", id:1},
-    {anvesh:"akhil", id:2},
-    {anvesh:"akki", id:3},
   
-  ]
   ///rxjs observable working ///
   // operonDOM:any
   // obser=new Observable(function(movie){
