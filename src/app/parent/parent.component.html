@@ -1,7 +1,25 @@
 
 <div class="container parent">
 <p>parent works!</p>
-<h6>{{childevent}}</h6>
-<app-child   [fromparentstudentdata]="forinputcomponent" [fromparent]="forinputcomp2" (notifyparent)="childevent=$event "></app-child>
+ <p (click)="clicktoemit()">myprof:{{myProf}}</p>  
+<app-child [counter]="counter"  [fromparentstudentdata]="forinputcomponent" [fromparent]="forinputcomp2" (notifyparent)="childevent=$event "></app-child>
 <p>this is parent end ------------------------------</p>
 </div>
+
+
+<app-lifecylehooks *ngIf='isVisible' [num]="number"></app-lifecylehooks>
+
+<button class="btn btn-primary "(click)="incrimental()">this method genrated for lifecycleHook</button>
+<button class="btn btn-danger "(click)="destroy()">To Destroy the lifecycleHook</button>
+
+click for incrementvalues parent to child 
+
+<button class="btn btn-primary" (click)="incrimentalnumber()">click for increment in child component</button>
+<p>{{counter}}
+   <input type="file" id=upload (input)="uploadfilesecondsenario($event)">
+   filename:{{filename}}
+
+
+
+  <br> --------------------------------------------------------------------------------- 
+   <app-merge-map></app-merge-map>

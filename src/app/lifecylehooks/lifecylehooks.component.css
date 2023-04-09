@@ -1,0 +1,16 @@
+.container-sm{
+    border: red 1px solid;
+}
+.container-md{
+    border: rgb(126, 43, 43) 1px solid;
+}
+
+.container-xl{
+    border: rgb(251, 255, 0) 1px solid;
+}
+.container-xxl{
+    border: rgb(17, 5, 5) 1px solid;
+}
+.container-lg{
+    border: rgb(55, 30, 192) 1px solid;
+}

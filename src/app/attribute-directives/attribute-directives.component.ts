@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SubjectService } from '../subject.service';
 
 @Component({
   selector: 'app-attribute-directives',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AttributeDirectivesComponent implements OnInit {
   names: any[] = [1, 2, 3, 3, 3, 3];
   name: any[] = [];
+
+//this variable mentioned for call subject operator which is subscribing from subjectservice.ts//
+  subjectdata:any
 
   clickname() {
     this.names[0] = 1;
@@ -26,9 +30,14 @@ clickname1(event:any){
   console.log(event)
 }
 
- 
-
-  constructor() {
+  constructor(public subjectservic:SubjectService) {
+///this data coming from subjectservice for subject operator//
+  this.subjectservic.subjectnotification.subscribe({
+    next:(subjectvalue)=>{
+      this.subjectdata=subjectvalue
+      console.log(this.subjectdata)
+    }
+  })
     
   }
   ngOnInit(): void {}
@@ -36,9 +45,7 @@ clickname1(event:any){
   testColor = { color: 'blue' };
   testColor2 = { color: 'yellow' };
   TestedValue = true;
-
   firstDiv = 'activeClass';
   secondDiv = 'inactiveClass';
-
   CheckValue = 'myname';
 }

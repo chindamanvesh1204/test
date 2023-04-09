@@ -13,11 +13,11 @@ export class GettersetterComponent implements OnInit {
    public updatedage:any;
    public updatedage1:any ;
 
-   get age(){
+   get page(){
       return this._age;
    }
    
-   set age(val){
+   set page(val){
     this._age=val;
 
     if(val >= 18){

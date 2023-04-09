@@ -12,6 +12,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { LifecylehooksComponent } from './lifecylehooks/lifecylehooks.component';
+import { SubjectComponent } from './subject/subject.component';
+import { SubjectService } from './subject.service';
+import { ForinputstaskComponent } from './forinputstask/forinputstask.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,11 @@ import { ChildComponent } from './child/child.component';
     ImpurepipesComponent,
      AttributeDirectivesComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    LifecylehooksComponent,
+    SubjectComponent,
+    ForinputstaskComponent,
+    MergeMapComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +39,7 @@ import { ChildComponent } from './child/child.component';
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [SubjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
